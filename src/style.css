@@ -18,7 +18,7 @@ header {
   justify-content: space-between;
   border-bottom: 1px solid #e0d2f5;
   padding-bottom: 25px;
-  margin-bottom: 30px;
+
   text-align: center;
 }
 
@@ -64,8 +64,46 @@ header {
 #dark-mode:hover {
   cursor: pointer;
 }
+
+.weather-app-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weather-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+.weather-city {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.weather-temperature {
+  margin: 0;
+  font-size: 55px;
+  font-weight: bold;
+}
+.weather-right {
+  text-align: center;
+  font-size: 16px;
+  padding: 40px 0;
+  line-height: 24px;
+  font-weight: 500;
+}
+.weather-right strong {
+  color: #885df1;
+}
+.weather-icon {
+  font-size: 60px;
+  margin-bottom: 40px;
+}
+
 footer {
-  margin-top: 40px;
   font-size: 14px;
   text-align: center;
   border-top: 1px solid #e0d2f5;
