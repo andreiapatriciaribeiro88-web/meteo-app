@@ -1,7 +1,10 @@
 body {
   background-color: #f3e8ff;
-
   font-family: "Roboto", sans-serif;
+}
+body.dark-mode {
+  background-color: #2e1a47;
+  color: #eeeaf5;
 }
 
 .weather-now-app {
@@ -13,12 +16,15 @@ body {
   box-shadow: 0 20px 40px rgba(179, 138, 255, 0.1);
 }
 
+body.dark-mode .weather-now-app {
+  background: #3b2761;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #e0d2f5;
   padding-bottom: 25px;
-
   text-align: center;
 }
 
@@ -117,4 +123,12 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+body.dark-mode footer {
+  color: #bbb;
+}
+
+body.dark-mode footer a {
+  color: #d1b3ff;
 }
