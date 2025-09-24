@@ -1,0 +1,12 @@
+body {
+  background: #e3f2fd;
+}
+
+.weather-now-app {
+  background: #ffffff;
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
