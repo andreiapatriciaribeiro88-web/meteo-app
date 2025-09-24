@@ -8,5 +8,57 @@ body {
   margin: 60px auto;
   padding: 30px 40px;
   border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 20px 40px rgba(179, 138, 255, 0.1);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e0d2f5;
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.search-form {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  margin-right: 20px;
+}
+
+.search-input {
+  background-color: #f8f0ff;
+  font-size: 16px;
+  padding: 14px 18px;
+  border: 1px solid #d1b3ff;
+  border-radius: 12px;
+  width: 80%;
+  padding: 15px 20px;
+}
+
+.search-button {
+  background-color: #c89efc;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 15px 20px;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(179, 138, 255, 0.4);
+  transition: all 300ms ease;
+}
+
+.search-button:hover {
+  cursor: pointer;
+  background-color: #ae7dfb;
+}
+
+#dark-mode {
+  border: none;
+  background: transparent;
+  font-size: 24px;
+}
+
+#dark-mode:hover {
+  cursor: pointer;
 }
