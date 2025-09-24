@@ -1,11 +1,12 @@
 body {
-  background: #e3f2fd;
+  background-color: #f3e8ff;
+
   font-family: "Roboto", sans-serif;
 }
 
 .weather-now-app {
   background: #ffffff;
-  max-width: 600px;
+  max-width: 500px;
   margin: 60px auto;
   padding: 30px 40px;
   border-radius: 16px;
@@ -62,4 +63,20 @@ header {
 
 #dark-mode:hover {
   cursor: pointer;
+}
+footer {
+  margin-top: 40px;
+  font-size: 14px;
+  text-align: center;
+  border-top: 1px solid #e0d2f5;
+  padding-top: 15px;
+  color: #777;
+}
+footer a {
+  color: #885df1;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
