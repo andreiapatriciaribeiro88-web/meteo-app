@@ -15,12 +15,13 @@
   <body>
     <div class="weather-now-app">
       <header>
-        <form class="search-form">
+        <form class="search-form" id="search-form">
           <input
             type="search"
             placeholder="Search city..."
             required
             class="search-input"
+            id="search-input"
           />
           <input type="submit" value="Search" class="search-button" />
         </form>
@@ -30,16 +31,16 @@
       <main>
         <div class="weather-app-data">
           <div class="weather-left">
-            <h1 class="weather-city">Porto</h1>
+            <h1 class="weather-city" id="city">Porto</h1>
             <p class="weather-temperature">24 ºC</p>
           </div>
 
           <div class="weather-right">
+            <div class="weather-time" id="time">Tuesday 15:36</div>
             <div class="weather-icon">☀️</div>
-            <div id="time">Tuesday 15:36</div>
-            <div id="description">Mostly Sunny</div>
-            <div>Humidity: <strong id="humidity">38% </strong></div>
-            <div>Wind: <strong id="wind">8km/h</strong></div>
+            <div class="weather-description">Mostly Sunny</div>
+            <span><strong>Humidity:</strong> 38%</span>
+            <span><strong>Wind:</strong> 8 km/h</span>
           </div>
         </div>
       </main>

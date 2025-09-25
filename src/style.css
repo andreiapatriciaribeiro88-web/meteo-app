@@ -100,13 +100,27 @@ header {
   padding: 40px 0;
   line-height: 24px;
   font-weight: 500;
+  line-height: 1.5;
 }
 .weather-right strong {
   color: #885df1;
 }
+.weather-time {
+  font-size: 16px;
+  color: rgba(39, 33, 66, 0.6);
+}
+
 .weather-icon {
   font-size: 60px;
-  margin-bottom: 40px;
+}
+.weather-description {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+
+body.dark-mode .weather-time {
+  color: #fff;
 }
 
 footer {
