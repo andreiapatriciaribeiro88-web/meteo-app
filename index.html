@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="weather-now-app">
@@ -31,8 +32,10 @@
       <main>
         <div class="weather-app-data">
           <div class="weather-left">
-            <h1 class="weather-city" id="city">Porto</h1>
-            <p class="weather-temperature">24 ºC</p>
+            <h1 class="weather-city" id="city"></h1>
+            <p class="weather-temperature">
+              <span id="temperature"></span> <span>ºC</span>
+            </p>
           </div>
 
           <div class="weather-right">
