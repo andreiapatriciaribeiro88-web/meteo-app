@@ -25,7 +25,6 @@ header {
   justify-content: space-between;
   border-bottom: 1px solid #e0d2f5;
   padding-bottom: 25px;
-  text-align: center;
 }
 
 .search-form {
@@ -38,7 +37,6 @@ header {
 .search-input {
   background-color: #f8f0ff;
   font-size: 16px;
-  padding: 14px 18px;
   border: 1px solid #d1b3ff;
   border-radius: 12px;
   width: 80%;
@@ -98,7 +96,6 @@ header {
   text-align: center;
   font-size: 16px;
   padding: 40px 0;
-  line-height: 24px;
   font-weight: 500;
   line-height: 1.5;
 }
