@@ -1,7 +1,6 @@
 let darkModeBtn = document.querySelector("#dark-mode");
 
 function darkMode() {
-  let darkModeBtn = document.querySelector("#dark-mode");
   document.body.classList.toggle("dark-mode");
   if (document.body.classList.contains("dark-mode")) {
     darkModeBtn.textContent = "☀️";
@@ -31,6 +30,8 @@ function refreshWeather(response) {
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
   timeElement.innerHTML = formatDate(date);
   iconElement.innerHTML = `<img src="${iconUrl}" class="weather-icon"/>`;
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -67,24 +68,40 @@ function searchCityButton(event) {
   searchCity(searchInput.value);
 }
 
-function displayForecast() {
-  let days = ["Sat", "Sun", "Mon", "Tue", "Wed"];
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let day = date.getDay();
+
+  return days[day];
+}
+function getForecast(city) {
+  let apiKey = "a9taa49fcab393c9d77od70f76b07b85";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+function displayForecast(response) {
+  console.log(response.data);
   let forecastHtml = "";
 
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `
  <div class="weather-forecast-day">
-   <div class="weather-forecast-date">${day}</div>
-   <div class="weather-forecast-icon">☀️</div>
+   <div class="weather-forecast-date">${formatDay(day.time)}</div>
+ <img src="${day.condition.icon_url}" class="weather-forecast-icon "/>
    <div class="weather-forecast-temperatures">
      <div class="weather-forecast-temp">
-       <strong>23º</strong>
+       <strong>${Math.round(day.temperature.maximum)}º</strong>
      </div>
-     <div class="weather-forecast-temp">10º</div>
+     <div class="weather-forecast-temp">${Math.round(
+       day.temperature.minimum
+     )}º</div>
    </div>
- </div>;`;
+ </div>`;
+    }
   });
 
   let forecastElement = document.querySelector("#forecast");
@@ -95,4 +112,3 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", searchCityButton);
 
 searchCity("Porto");
-displayForecast();

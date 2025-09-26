@@ -85,12 +85,20 @@ header {
   margin: 0;
   font-size: 40px;
   line-height: 1.2;
+  color: #3b2761;
+}
+body.dark-mode .weather-city {
+  color: #fff;
 }
 
 .weather-temperature {
   margin: 0;
   font-size: 55px;
   font-weight: bold;
+  color: #3b2761;
+}
+body.dark-mode .weather-temperature {
+  color: #fff;
 }
 .weather-right {
   text-align: center;
@@ -138,9 +146,10 @@ body.dark-mode .weather-forecast-date {
   color: #fff;
 }
 .weather-forecast-icon {
-  text-align: center;
-  font-size: 38px;
-  margin-top: 10px;
+  display: block;
+  margin: 0 auto;
+  width: 88px;
+  height: 88px;
 }
 
 .weather-forecast-temperatures {
